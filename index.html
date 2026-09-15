@@ -24,7 +24,7 @@
   <meta property="og:url" content="https://palleturupalaharam.com/">
   <meta property="og:title" content="Palleturu Palaharam | పల్లెటూరు పలహారం - Authentic Telugu Tiffins">
   <meta property="og:description" content="Old Telugu village-style tastes served with the warmth of tradition. Pure vegetarian breakfast, tiffins, and meals in Madhura Nagar, Hyderabad.">
-  <meta property="og:image" content="Palleturu Palaharam Banner.png">
+  <meta property="og:image" content="https://palleturupalaharam.com/Palleturu%20Palaharam%20Banner.png">
   <meta property="og:image:alt" content="Palleturu Palaharam restaurant banner with traditional Telugu hut logo">
 
   <!-- Twitter / X -->
@@ -32,7 +32,7 @@
   <meta name="twitter:url" content="https://palleturupalaharam.com/">
   <meta name="twitter:title" content="Palleturu Palaharam | పల్లెటూరు పలహారం">
   <meta name="twitter:description" content="Traditional South Indian & Telugu village-style tiffins in Madhura Nagar, Hyderabad. Call +91 80081 81122.">
-  <meta name="twitter:image" content="Palleturu Palaharam Banner.png">
+  <meta name="twitter:image" content="https://palleturupalaharam.com/Palleturu%20Palaharam%20Banner.png">
 
   <!-- Schema.org Local Business (Restaurant) JSON-LD -->
   <script type="application/ld+json">
@@ -41,7 +41,7 @@
     "@type": "Restaurant",
     "name": "Palleturu Palaharam",
     "alternateName": "పల్లెటూరు పలహారం",
-    "image": "Palleturu Palaharam Banner.png",
+    "image": "https://palleturupalaharam.com/Palleturu%20Palaharam%20Banner.png",
     "description": "Authentic traditional Telugu village-style vegetarian restaurant serving breakfast, tiffins, tea, and meals in Madhura Nagar, Hyderabad.",
     "telephone": "+918008181122",
     "url": "https://palleturupalaharam.com/",
@@ -210,6 +210,11 @@
 
 <body class="font-serifBody text-antique-ink antialiased selection:bg-mustard selection:text-maroon-900">
 
+  <!-- Accessible Skip to Main Content Link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-maroon focus:text-mustard focus:border focus:border-mustard focus:rounded-lg focus:shadow-xl focus:font-traditional focus:font-bold focus:outline-none">
+    Skip to main content
+  </a>
+
   <header class="sticky top-0 z-40 bg-[#F7F3E9]/95 backdrop-blur-md border-b-2 border-terracotta shadow-md transition-all duration-300" id="mainHeader">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
@@ -253,11 +258,12 @@
         <div class="flex items-center gap-3 md:hidden">
           <button 
             id="mobileToggleBtn"
+            type="button"
             onclick="toggleMobileMenu()" 
-            aria-label="Toggle navigation menu" 
+            aria-label="Open navigation menu" 
             aria-expanded="false" 
             aria-controls="mobileDrawer"
-            class="w-11 h-11 rounded-xl bg-antique-cream border border-terracotta/40 hover:border-maroon text-maroon flex items-center justify-center shadow-sm transition active:scale-95">
+            class="w-11 h-11 rounded-xl bg-antique-cream border border-terracotta/40 hover:border-maroon text-maroon flex items-center justify-center shadow-sm transition active:scale-95 cursor-pointer">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
@@ -268,49 +274,53 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu (Outside header to avoid backdrop-filter viewport containment bug) -->
+  <!-- Mobile Drawer Menu: Optimized for mobile browser chrome and bottom gesture bars -->
   <div 
     id="mobileDrawer" 
     role="dialog"
     aria-modal="true"
     aria-label="Mobile Navigation Menu"
-    class="fixed inset-y-0 right-0 w-80 max-w-[85vw] h-screen h-[100dvh] bg-[#F7F3E9] shadow-2xl border-l-4 border-maroon transform translate-x-full transition-transform duration-300 ease-in-out z-[9999] flex flex-col justify-between p-6 overflow-y-auto">
-    <div class="space-y-6">
-      <div class="flex items-center justify-between border-b border-terracotta/30 pb-4">
+    class="fixed top-0 bottom-0 right-0 w-80 max-w-[85vw] h-[100dvh] max-h-[100dvh] bg-[#F7F3E9] shadow-2xl border-l-4 border-maroon transform translate-x-full transition-transform duration-300 ease-in-out z-[9999] flex flex-col justify-between p-5 pb-8 sm:p-6 sm:pb-10 overflow-y-auto overscroll-contain">
+    
+    <!-- Top Header & Navigation Links -->
+    <div class="space-y-4 sm:space-y-6 shrink-0">
+      <div class="flex items-center justify-between border-b border-terracotta/30 pb-3 sm:pb-4">
         <div>
           <span class="font-traditional font-bold text-lg text-maroon block">Menu</span>
           <span lang="te" class="font-telugu text-xs text-terracotta font-semibold">పలహారాలు & వివరాలు</span>
         </div>
         <button 
           id="closeDrawerBtn"
+          type="button"
           onclick="toggleMobileMenu()" 
           aria-label="Close navigation menu" 
-          class="w-10 h-10 rounded-lg bg-maroon text-antique-cream flex items-center justify-center font-bold text-lg hover:bg-maroon-800 transition active:scale-95">
+          class="w-10 h-10 rounded-lg bg-maroon text-antique-cream flex items-center justify-center font-bold text-lg hover:bg-maroon-800 transition active:scale-95 cursor-pointer">
           ✕
         </button>
       </div>
 
-      <nav class="flex flex-col space-y-3 font-traditional font-bold text-base text-maroon" aria-label="Mobile Navigation Links">
-        <a href="#home" onclick="toggleMobileMenu()" class="hover:text-terracotta py-2.5 border-b border-terracotta/20 flex items-center justify-between">
+      <nav class="flex flex-col space-y-2 sm:space-y-3 font-traditional font-bold text-base text-maroon" aria-label="Mobile Navigation Links">
+        <a href="#home" onclick="toggleMobileMenu()" class="hover:text-terracotta py-2 sm:py-2.5 border-b border-terracotta/20 flex items-center justify-between">
           <span>HOME</span>
           <span lang="te" class="text-xs text-antique-ink/60 font-telugu">ప్రారంభం</span>
         </a>
-        <a href="#menu" onclick="toggleMobileMenu()" class="hover:text-terracotta py-2.5 border-b border-terracotta/20 flex items-center justify-between">
+        <a href="#menu" onclick="toggleMobileMenu()" class="hover:text-terracotta py-2 sm:py-2.5 border-b border-terracotta/20 flex items-center justify-between">
           <span>MENU</span>
           <span lang="te" class="text-xs text-antique-ink/60 font-telugu">పలహారాలు</span>
         </a>
-        <a href="#reviews" onclick="toggleMobileMenu()" class="hover:text-terracotta py-2.5 border-b border-terracotta/20 flex items-center justify-between">
+        <a href="#reviews" onclick="toggleMobileMenu()" class="hover:text-terracotta py-2 sm:py-2.5 border-b border-terracotta/20 flex items-center justify-between">
           <span>REVIEWS</span>
           <span lang="te" class="text-xs text-antique-ink/60 font-telugu">స్పందనలు</span>
         </a>
-        <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-terracotta py-2.5 border-b border-terracotta/20 flex items-center justify-between">
+        <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-terracotta py-2 sm:py-2.5 border-b border-terracotta/20 flex items-center justify-between">
           <span>CONTACT</span>
           <span lang="te" class="text-xs text-antique-ink/60 font-telugu">చిరునామా</span>
         </a>
       </nav>
     </div>
 
-    <div class="space-y-3 pt-6 border-t border-terracotta/30 text-center">
+    <!-- Bottom Contact & Details: Fully visible with generous bottom clearance for browser/gesture bar -->
+    <div class="space-y-3 pt-4 sm:pt-6 border-t border-terracotta/30 text-center shrink-0 mt-6 pb-2">
       <a href="tel:+918008181122" class="w-full py-3.5 rounded-xl bg-maroon text-mustard font-sans font-bold text-sm shadow-md flex items-center justify-center gap-2 active:scale-95 transition">
         <span aria-hidden="true">📞</span>
         <span>+91 80081 81122</span>
@@ -322,17 +332,20 @@
   <!-- Backdrop overlay for mobile drawer -->
   <div id="drawerBackdrop" onclick="toggleMobileMenu()" class="fixed inset-0 bg-black/60 z-[9998] hidden transition-opacity" aria-hidden="true"></div>
 
-  <section id="home" class="relative overflow-hidden bg-[#7A1C16] text-antique-cream py-14 md:py-24 px-4 sm:px-6 lg:px-8 border-b-8 border-terracotta">
+  <!-- Main Landmark Container -->
+  <main id="main-content">
+
+  <section id="home" class="relative overflow-hidden bg-[#7A1C16] text-antique-cream min-h-[calc(100vh-5rem)] min-h-[calc(100dvh-5rem)] flex flex-col justify-center py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 border-b-8 border-terracotta">
     <!-- Traditional Rangoli background overlay patterns -->
     <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#F5C767 1px, transparent 1px); background-size: 24px 24px;" aria-hidden="true"></div>
     
     <div class="absolute top-0 left-0 right-0 h-3 muggu-divider-gold opacity-60" aria-hidden="true"></div>
     <div class="absolute bottom-0 left-0 right-0 h-3 muggu-divider-gold opacity-60" aria-hidden="true"></div>
 
-    <div class="max-w-4xl mx-auto relative z-10 text-center space-y-6">
+    <div class="max-w-4xl mx-auto relative z-10 text-center space-y-6 sm:space-y-8 my-auto w-full">
       
       <!-- Hero Main Titles -->
-      <div class="space-y-2">
+      <div class="space-y-2 sm:space-y-3">
         <h1 lang="te" class="text-4xl sm:text-6xl lg:text-7xl font-telugu font-black tracking-tight text-mustard-light drop-shadow-md leading-[1.15]">
           పల్లెటూరు పలహారం
         </h1>
@@ -351,26 +364,16 @@
       </div>
 
       <!-- Core Offerings Tagline -->
-      <div class="space-y-4">
-        <p lang="te" class="font-telugu text-xl sm:text-2xl text-mustard font-semibold tracking-wide">
-          పూర్వపు రుచులు
-        </p>
-
-        <div class="inline-block bg-maroon-900/80 border-2 border-mustard/50 rounded-xl px-6 py-2.5 shadow-lg">
-          <span class="font-traditional text-mustard-light font-bold text-base sm:text-lg tracking-wider">
-            ☕ Tea &nbsp;|&nbsp; 🥞 Tiffin &nbsp;|&nbsp; 🍲 Meals
-          </span>
-        </div>
-      </div>
+      
 
       <!-- CTAs -->
-      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#menu" class="w-full sm:w-auto min-h-[48px] px-8 py-4 rounded-xl bg-mustard hover:bg-mustard-dark text-maroon-900 font-traditional font-bold text-lg tracking-wider transition-all transform hover:-translate-y-0.5 shadow-lg flex items-center justify-center gap-3">
+      <div class="pt-4 sm:pt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+        <a href="#menu" class="w-full sm:w-auto min-h-[52px] px-8 py-4 rounded-xl bg-mustard hover:bg-mustard-dark text-maroon-900 font-traditional font-bold text-lg tracking-wider transition-all transform hover:-translate-y-0.5 shadow-lg flex items-center justify-center gap-3">
           <span>EXPLORE OUR MENU</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
         
-        <a href="#contact" class="w-full sm:w-auto min-h-[48px] px-8 py-4 rounded-xl bg-maroon-900/60 hover:bg-maroon-900 text-antique-cream border-2 border-antique-cream/40 font-traditional font-bold text-lg tracking-wider transition-all flex items-center justify-center gap-2">
+        <a href="#contact" class="w-full sm:w-auto min-h-[52px] px-8 py-4 rounded-xl bg-maroon-900/60 hover:bg-maroon-900 text-antique-cream border-2 border-antique-cream/40 font-traditional font-bold text-lg tracking-wider transition-all flex items-center justify-center gap-2">
           <svg class="w-5 h-5 text-mustard" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           <span>VISIT US</span>
         </a>
@@ -392,34 +395,45 @@
         <p class="text-sm sm:text-base font-serifBody text-antique-ink/80 italic">
           Freshly made traditional tiffins served hot with our signature chutneys.
         </p>
+
+        <!-- Connected Lightbox Trigger for Original Menu Card -->
+        <div class="pt-2">
+          <button 
+            type="button" 
+            onclick="openLightbox('food menu card.webp', 'Palleturu Palaharam Original Food Menu Card')" 
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-antique-cream border border-terracotta/50 text-maroon hover:bg-maroon hover:text-mustard transition font-traditional text-xs font-bold shadow-sm active:scale-95 cursor-pointer">
+            <span aria-hidden="true">📜</span>
+            <span>VIEW ORIGINAL MENU CARD PHOTO</span>
+          </button>
+        </div>
+
         <div class="muggu-divider max-w-xs mx-auto" aria-hidden="true"></div>
-       
       </div>
 
-      <!-- Menu Category Filter Tabs -->
-      <div class="flex flex-wrap justify-center gap-2 mb-10" id="menuTabs" role="tablist" aria-label="Menu Categories">
-        <button role="tab" aria-selected="true" onclick="filterMenu('all', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-maroon text-mustard border border-mustard">
+      <!-- Menu Category Filter Controls with Accessible aria-pressed semantics -->
+      <div class="flex flex-wrap justify-center gap-2 mb-10" id="menuTabs" aria-label="Menu Category Filters">
+        <button type="button" aria-pressed="true" onclick="filterMenu('all', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-maroon text-mustard border border-mustard cursor-pointer">
           ALL ITEMS
         </button>
-        <button role="tab" aria-selected="false" onclick="filterMenu('idli', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker">
+        <button type="button" aria-pressed="false" onclick="filterMenu('idli', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker cursor-pointer">
           IDLI
         </button>
-        <button role="tab" aria-selected="false" onclick="filterMenu('vada', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker">
+        <button type="button" aria-pressed="false" onclick="filterMenu('vada', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker cursor-pointer">
           VADA
         </button>
-        <button role="tab" aria-selected="false" onclick="filterMenu('pesarattu', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker">
+        <button type="button" aria-pressed="false" onclick="filterMenu('pesarattu', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker cursor-pointer">
           PESARATTU
         </button>
-        <button role="tab" aria-selected="false" onclick="filterMenu('pullattu', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker">
+        <button type="button" aria-pressed="false" onclick="filterMenu('pullattu', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker cursor-pointer">
           PULLATTU
         </button>
-        <button role="tab" aria-selected="false" onclick="filterMenu('dosa', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker">
+        <button type="button" aria-pressed="false" onclick="filterMenu('dosa', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker cursor-pointer">
           DOSA
         </button>
-        <button role="tab" aria-selected="false" onclick="filterMenu('others', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker">
+        <button type="button" aria-pressed="false" onclick="filterMenu('others', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker cursor-pointer">
           OTHERS
         </button>
-        <button role="tab" aria-selected="false" onclick="filterMenu('evening', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker">
+        <button type="button" aria-pressed="false" onclick="filterMenu('evening', event)" class="tab-btn px-4 py-2 rounded-lg font-traditional text-sm font-bold transition bg-antique-cream text-maroon border border-terracotta/40 hover:bg-antique-darker cursor-pointer">
           EVENING TIFFINS
         </button>
       </div>
@@ -933,9 +947,7 @@
             <h3 class="text-2xl sm:text-3xl font-traditional font-bold text-antique-parchment">
               Palleturu Palaharam
             </h3>
-            <p lang="te" class="font-telugu text-lg text-mustard">
-              పూర్వపు రుచులు • Tea | Tiffin | Meals
-            </p>
+            
           </div>
 
           <div class="muggu-divider-gold" aria-hidden="true"></div>
@@ -1040,6 +1052,8 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="bg-[#7A1C16] text-antique-parchment border-t-8 border-terracotta pt-16 pb-12 relative overflow-hidden">
     
     <div class="absolute top-0 left-0 right-0 h-3 muggu-divider-gold opacity-50" aria-hidden="true"></div>
@@ -1068,10 +1082,6 @@
           <p class="text-xs text-antique-parchment/80 font-sans">
             📍 H-32, Krishnakanth Park Rd, opp. Aptech school, near Prathibha high school, Vamika Arcade, Madhura Nagar, Hyderabad - 500038
           </p>
-
-          <div lang="te" class="font-traditional text-mustard text-sm font-semibold">
-            పూర్వపు రుచులు • Tea | Tiffin | Meals
-          </div>
         </div>
 
         <!-- Col 2: Navigation Links -->
@@ -1141,7 +1151,7 @@
 
       <div class="mt-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-maroon font-traditional">
         <p id="lightboxCaption" class="text-sm sm:text-base font-bold text-center sm:text-left"></p>
-        <button onclick="closeLightbox(null)" class="text-xs bg-terracotta text-white px-3 py-1.5 rounded-md font-bold hover:bg-terracotta-dark transition cursor-pointer">
+        <button type="button" onclick="closeLightbox(null)" class="text-xs bg-terracotta text-white px-3 py-1.5 rounded-md font-bold hover:bg-terracotta-dark transition cursor-pointer">
           Close Window
         </button>
       </div>
@@ -1149,7 +1159,10 @@
   </div>
 
   <script>
-    // Accessible Mobile Drawer Toggle with ARIA state and Escape key support
+    // Focus management references
+    let lastActiveElement = null;
+
+    // Accessible Mobile Drawer Toggle with ARIA state, Focus Trap and Escape key support
     function toggleMobileMenu() {
       const drawer = document.getElementById('mobileDrawer');
       const backdrop = document.getElementById('drawerBackdrop');
@@ -1160,19 +1173,25 @@
       const isOpen = !drawer.classList.contains('translate-x-full');
 
       if (isOpen) {
+        // Close drawer
         drawer.classList.add('translate-x-full');
         backdrop.classList.add('hidden');
         document.body.style.overflow = '';
+        drawer.removeEventListener('keydown', handleDrawerFocusTrap);
         if (toggleBtn) {
           toggleBtn.setAttribute('aria-expanded', 'false');
+          toggleBtn.setAttribute('aria-label', 'Open navigation menu');
           toggleBtn.focus();
         }
       } else {
+        // Open drawer
         drawer.classList.remove('translate-x-full');
         backdrop.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        drawer.addEventListener('keydown', handleDrawerFocusTrap);
         if (toggleBtn) {
           toggleBtn.setAttribute('aria-expanded', 'true');
+          toggleBtn.setAttribute('aria-label', 'Close navigation menu');
         }
         if (closeBtn) {
           closeBtn.focus();
@@ -1180,19 +1199,44 @@
       }
     }
 
-    // Accessible Menu Filtering Function
+    // Accessible Focus Trap for Mobile Drawer
+    function handleDrawerFocusTrap(e) {
+      if (e.key !== 'Tab') return;
+      const drawer = document.getElementById('mobileDrawer');
+      if (!drawer) return;
+      
+      const focusableEls = drawer.querySelectorAll('button, a, [tabindex]:not([tabindex="-1"])');
+      if (focusableEls.length === 0) return;
+      
+      const firstEl = focusableEls[0];
+      const lastEl = focusableEls[focusableEls.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstEl) {
+          e.preventDefault();
+          lastEl.focus();
+        }
+      } else {
+        if (document.activeElement === lastEl) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
+    }
+
+    // Accessible Menu Filtering Function (aria-pressed toggle)
     function filterMenu(category, e) {
       const buttons = document.querySelectorAll('#menuTabs button');
       buttons.forEach(btn => {
         btn.classList.remove('bg-maroon', 'text-mustard', 'border-mustard');
         btn.classList.add('bg-antique-cream', 'text-maroon');
-        btn.setAttribute('aria-selected', 'false');
+        btn.setAttribute('aria-pressed', 'false');
       });
 
       if (e && e.currentTarget) {
         e.currentTarget.classList.remove('bg-antique-cream', 'text-maroon');
         e.currentTarget.classList.add('bg-maroon', 'text-mustard', 'border-mustard');
-        e.currentTarget.setAttribute('aria-selected', 'true');
+        e.currentTarget.setAttribute('aria-pressed', 'true');
       }
 
       const cards = document.querySelectorAll('.menu-cat-card');
@@ -1206,8 +1250,6 @@
     }
 
     // Accessible Lightbox Modal
-    let lastActiveElement = null;
-
     function openLightbox(src, caption) {
       lastActiveElement = document.activeElement;
       const modal = document.getElementById('imageLightbox');
